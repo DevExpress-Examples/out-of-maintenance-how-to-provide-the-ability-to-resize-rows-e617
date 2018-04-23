@@ -1,0 +1,31 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>How to provide the ability to resize rows - Developer Express Example</title>
+<style>
+html, body, form 
+{
+	font-family: Tahoma, Arial, Verdana;
+    font-size: small;
+    color: #303440;
+}
+h1 {
+	font-size: 125%;
+	font-weight: normal;
+	color: Black;
+	letter-spacing: 101%;
+}
+</style>
+</head>
+<body>
+<h1>Developer Express Example<br />How to provide the ability to resize rows</h1>
+<p>Description:
+ I am trying to provide my end-users with the ability to change a specific row's height via the mouse. Is there a way to implement this feature? 
+
+
+Solution:
+ The XtraGrid doesn?t provide such a feature automatically due to the fact that it doesn't cache any data internally. Thus it can?t store different row sizes.  However, you can implement this task yourself.  To do this you should handle the GridView's MouseDown, MouseUp and CalcRowHeight events.  Within the MouseDown and  the MouseUp events you should handle row size changing.  Within the CalcRowHeight event handler you should pass the valid row height for a specific row.  In the attached project you will find a sample project which demonstrates this task</p>
+<p>You can find sample updates and versions for different programming languages here:<br /><a href="http://www.devexpress.com/example=E617">http://www.devexpress.com/example=E617</a>.</p>
+</body>
+</html>
